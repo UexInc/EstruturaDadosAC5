@@ -25,6 +25,7 @@ class Q5Test {
 		assertNull(A.put(26, null));
 		assertNull(A.put(11, null));
 		assertNull(A.put(13, null));
+		System.out.println(A.printExpression(A.root()));
 	}
 	
 	// Passo a passo na imagem - Q5.png

@@ -2,6 +2,8 @@ package q6;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
+
 import org.junit.jupiter.api.Test;
 
 import q2.BinarySearchTree;
@@ -15,22 +17,29 @@ class Q6Test {
 	
 	@Test
 	void test() {
-		insertions(1, 2, 3);
-		insertions(1, 3, 2);
-		insertions(2, 3, 1);
-		insertions(2, 1, 3);
-		insertions(3, 1, 2);
-		insertions(3, 2, 1);
-		System.out.println("R: Apenas uma árvore binária de pesquisa \n"
-				+ "será gerada com as chaves {1, 2, 3}");
+		ArrayList<String> aX = new ArrayList<String>();
+		String a1 = insertions(1, 2, 3);
+		String a2 = insertions(1, 3, 2);
+		String a3 = insertions(2, 1, 3);
+		String a4 = insertions(2, 3, 1);
+		String a5 = insertions(3, 1, 2);
+		String a6 = insertions(3, 2, 1);
+		if (aX.indexOf(a1) < 0) aX.add(a1);
+		if (aX.indexOf(a2) < 0) aX.add(a2);
+		if (aX.indexOf(a3) < 0) aX.add(a3);
+		if (aX.indexOf(a4) < 0) aX.add(a4);
+		if (aX.indexOf(a5) < 0) aX.add(a5);
+		if (aX.indexOf(a6) < 0) aX.add(a6);
+		
+		System.out.println("Serão geradas " + aX.size() + " árvores binárias de pesquisas diferentes.");
 	}
 	
-	private void insertions(int c1, int c2, int c3) {
+	private String insertions(int c1, int c2, int c3) {
 		BinarySearchTree<Integer, Integer> A = new BinarySearchTree<Integer, Integer>();
-		assertNull(A.put(1, null));
-		assertNull(A.put(2, null));
-		assertNull(A.put(3, null));
-		System.out.println(A.printExpression(A.root()));
+		assertNull(A.put(c1, null));
+		assertNull(A.put(c2, null));
+		assertNull(A.put(c3, null));
+		return A.printExpression(A.root());
 	}
 
 }

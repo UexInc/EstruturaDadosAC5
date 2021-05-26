@@ -25,13 +25,6 @@ class Q9Test {
 		System.out.println(avl.printExpression(avl.root()));
 	}
 	
-	/*	Aparência:
-	 * 							(2, B)
-	 * 		
-	 * 					(1, A)			(4, D)
-	 * 		
-	 * 							  (3, C)		(5, E)
-	 *	
-	 */
+	// Resposta na imagem -  Q9.png
 
 }
